@@ -20,7 +20,7 @@ const Navbar = () => {
         <li onClick={() => {setMenu("plans")}}><Link style={{ textDecoration: 'none' }} to='/plans'>Plans</Link>{menu === "plans" ? <hr /> : <></>} </li>
         <li onClick={() => {setMenu("about")}}><Link style={{ textDecoration: 'none' }} to='/about'>About</Link> {menu === "about" ? <hr /> : <></>}  </li>
         <li onClick={() => {setMenu("Blogs")}}><Link style={{ textDecoration: 'none' }} to='/Blogs'>Blogs</Link> {menu === "Blogs" ? <hr /> : <></>}  </li>
-        <li><Link to="/quiz">Take Quiz</Link></li>
+        <li onClick={() => {setMenu("Blogs")}}><Link style={{ textDecoration: 'none' }} to='/quiz'>Take Quiz</Link> {menu === "quiz" ? <hr /> : <></>}  </li>
       </ul>
       <div className='nav-login-cart'>
         <Link to='/login'><button>Login</button></Link>

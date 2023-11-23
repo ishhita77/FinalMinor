@@ -22,3 +22,8 @@
     display: flex;
     gap:20px;
 }
+.popular-item img{
+    height: 380px;
+    width: 250px;
+
+}

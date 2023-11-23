@@ -10,15 +10,22 @@ import p9_img from "./product_9.png";
 import p10_img from "./product_10.png";
 import p11_img from "./product_11.png";
 import p12_img from "./product_12.png";
+import calm from './calm.mp3';
+import calm1 from './calm1.mp3';
+import calm2 from './calm2.mp3';
+import calm3 from './calm3.mp3';
+import calm4 from './calm4.mp3';
+import calm5 from './calm5.mp3';
 
 let all_product = [
   {
     id: 1,
-    name: "Reduce Stress",
+    name: "Reduce Stress, Welcome Peace",
     category: "Plans",
     image: p1_img,
     new_price: 50.0,
     old_price: 80.5,
+    audio: calm
   },
   {
     id: 2,
@@ -27,30 +34,34 @@ let all_product = [
     image: p2_img,
     new_price: 85.0,
     old_price: 120.5,
+    audio: calm
   },
   {
     id: 3,
-    name: "Promotes emotional health",
+    name: "Inner Happiness",
     category: "Plans",
     image: p3_img,
     new_price: 60.0,
     old_price: 100.5,
+    audio: calm1
   },
   {
     id: 4,
-    name: "Enhances self-awareness",
+    name: "Overall Mental Wellness",
     category: "Plans",
     image: p4_img,
     new_price: 100.0,
     old_price: 150.0,
+    audio: calm1
   },
   {
     id: 5,
-    name: "Lengthens attention span",
+    name: "Emotional Health and Cognitive Focus",
     category: "Plans",
     image: p5_img,
     new_price: 85.0,
     old_price: 120.5,
+    audio: calm2
   },
   {
     id: 6,
@@ -59,6 +70,7 @@ let all_product = [
     image: p6_img,
     new_price: 85.0,
     old_price: 120.5,
+    audio: calm2
   },
   {
     id: 7,
@@ -67,6 +79,7 @@ let all_product = [
     image: p7_img,
     new_price: 85.0,
     old_price: 120.5,
+    audio: calm3
   },
   {
     id: 8,
@@ -75,6 +88,7 @@ let all_product = [
     image: p8_img,
     new_price: 85.0,
     old_price: 120.5,
+    audio: calm3
   },
   {
     id: 9,
@@ -83,30 +97,34 @@ let all_product = [
     image: p9_img,
     new_price: 85.0,
     old_price: 120.5,
+    audio: calm4
   },
   {
     id: 10,
-    name: "Helps control pain",
+    name: "Energy Boost and Overall Wellness",
     category: "Plans",
     image: p10_img,
     new_price: 85.0,
     old_price: 120.5,
+    audio: calm4
   },
   {
     id: 11,
-    name: "Can decrease blood pressure",
+    name: "Meditation and Relaxation",
     category: "Plans",
     image: p11_img,
     new_price: 85.0,
     old_price: 120.5,
+    audio: calm5
   },
   {
     id: 12,
-    name: "Accessible anywhere",
+    name: "General Wellness",
     category: "Plans",
     image: p12_img,
     new_price: 85.0,
     old_price: 120.5,
+    audio: calm5
   }
 ];
 

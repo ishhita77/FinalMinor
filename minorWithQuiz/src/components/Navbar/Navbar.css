@@ -1,9 +1,8 @@
 .navbar{
     display:flex;
     justify-content: space-around;
-    padding: 10px;
     box-shadow: 0 1px 3px -2px black;
-    background-color: #e2d1d1;
+    background-color: white;
 }
 .nav-logo{
     display:flex;
@@ -12,7 +11,7 @@
 }
 .nav-logo p{
     color:#171717;
-    font-size:38px;
+    font-size:28px;
     font-weight:600;
 }
 .nav-menu{
@@ -20,7 +19,7 @@
     align-items: center;
     list-style: none;
     gap:50px;
-    color:#626262;
+    
     font-size:20px;
     font-weight: 500;
 }
@@ -31,22 +30,35 @@
     justify-content: center;
     gap:3px;
     cursor:pointer;
+    color:#626262;
+    border-bottom: 1px solid transparent;
+    transition: color 2s, border-bottom 4s;
 }
-.nav-menu hr{
+/* .nav-menu hr{
     border:none;
     width:80%;
     height:3px;
     border-radius: 10px;
     background: #417dff;
+} */
+
+.nav-menu li:hover{
+        color: #6f73a6;
+		border-bottom: 1px solid  #6f73a6;
+		transition: color 1s, border-bottom 1s;
 }
+
+
+
+
 .nav-login-cart{
   display:flex;
   align-items: center;  
   gap:45px;
 }
 .nav-login-cart button{
-    width:157px;
-    height:58px;
+    width:100px;
+    height:35px;
     outline:none;
     border:1px solid #7a7a7a;
     border-radius: 75px;
@@ -55,6 +67,7 @@
     font-weight: 500;
     background: white;
     cursor:pointer;
+    padding: 5px;
 }
 .nav-login-cart button:active{
 background-color: #f3f3f3;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import WellnessQuiz from './WellnessQuiz';
+import all_product from '../Assets/all_product';
 import './WellnessQuiz.css'
 
 const WellnessForm = () => {
@@ -49,17 +50,17 @@ const WellnessForm = () => {
   const calculateWellnessPlan = (stress, activity, sleep, appetite, mood, exercise, socialLife, focus, energy, overallWellness) => {
     // Updated logic based on new questions
     if (stress === 'high' && activity === 'low' && sleep === 'poor') {
-      return 'Meditation and Relaxation Plan';
+      return all_product.find(plan => plan.name === 'Reduce Stress, Welcome Peace');
     } else if (appetite === 'low' && mood === 'low') {
-      return 'Mindfulness and Meditation Plan';
+      return all_product.find(plan => plan.name === 'Inner Happiness');
     } else if (stress === 'high' && mood === 'low') {
-      return 'Stress Management Plan';
+      return all_product.find(plan => plan.name === 'Overall Mental Wellness');
     } else if (socialLife === 'low' && focus === 'low') {
-      return 'Social Connection and Focus Plan';
+      return all_product.find(plan => plan.name === 'Emotional Health and Cognitive Focus');
     } else if (energy === 'low' && overallWellness === 'low') {
-      return 'Energy Boost and Overall Wellness Plan';
+      return all_product.find(plan => plan.name === 'Energy Boost and Overall Wellness');
     } else {
-      return 'General Wellness Plan';
+      return all_product.find(plan => plan.name === 'General Wellness');
     }
   };
 
@@ -78,7 +79,7 @@ const WellnessForm = () => {
     <div>
         <br /><br /><br />
       <h1 style={{ textAlign: 'center' , fontFamily: 'sans-serif'}}>Wellness Assessment</h1>
-      <br /><br /><br />
+      <br />
       {showQuiz ? ( buttonVisible&&
         <WellnessQuiz
           quizData={quizData}
@@ -92,11 +93,23 @@ const WellnessForm = () => {
         <button onClick={handleTakeQuizClick}>Take Quiz</button>
         </div>
       )}
-        <br /><br /><br />
-      {quizData.wellnessPlan && (
-        <div >
-          <h3 style={{textAlign: 'center'}}>Recommended Wellness Plan:</h3>
-          <p style={{textAlign: 'center', marginTop : '10px'}}>{quizData.wellnessPlan}</p>
+        
+        {quizData.wellnessPlan && (
+        <div>
+          <h3 style={{ textAlign: 'center' }}>Recommended Wellness Plan:</h3>
+          <br />
+          {/* Display complete plan information */}
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+          <a href={`/product/${quizData.wellnessPlan.id}`}>
+            <img src={quizData.wellnessPlan.image} alt={quizData.wellnessPlan.name} className="image" style={{ maxWidth: '400px', maxHeight: '400px' }} />
+            </a>
+            <br /><br />
+            <h4>{quizData.wellnessPlan.name}</h4>
+            <br />
+            <p>Price: Rs {quizData.wellnessPlan.new_price}</p>
+            
+            
+          </div>
         </div>
       )}
       <br /><br /><br />

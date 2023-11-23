@@ -5,10 +5,10 @@ import MeditationQuotes from './MeditationQuotes'
 const Offers=()=>{
     return(
         <div className='offers'>
-          <div className='offers-left'>
+          <div className='quote'>
             <MeditationQuotes/>   
           </div>
-          <div className='offers-right'>
+          <div className='quote-image'>
             <img src={Quotes} alt=""/>
           </div>
         </div>
